@@ -11,6 +11,8 @@ import About from "../components/about";
 import Icons from "../components/icons";
 import Opening from "../components/opening";
 import Reviews from "../components/reviews";
+import LeaveReviews from "../components/leaveReviews"
+
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -64,6 +66,7 @@ function Home() {
       <Icons />
       <Opening />
       <Reviews />
+      <LeaveReviews/>
     </>
   );
 }

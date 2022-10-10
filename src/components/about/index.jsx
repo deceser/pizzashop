@@ -1,6 +1,5 @@
 import React from "react";
 
-import AboutUS from "../button/AboutUS.jsx";
 import about from "../../assets/image/about.png";
 import { Box__Container } from "../../styles/about";
 
@@ -16,7 +15,9 @@ const About = () => {
           <img src={about} alt="pic" width="450" />
         </Box>
         <Box sx={{ mt: "120px", maxWidth: "450px" }}>
-          <AboutUS />
+        <Typography color="#FE5F1E">
+          About Us
+        </Typography>
           <Box>
             <Typography
               sx={{ fontWeight: "bold", mt: "10px", fontSize: "20px" }}

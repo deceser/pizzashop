@@ -24,17 +24,15 @@ const settings = {
 const CardReview = () => {
   return (
     <Box
-      className="1234"
       sx={{
-        maxWidth: "700px",
-        pr: "0px",
+        width: "650px",
       }}
     >
       <Slider {...settings}>
         {reviews.map((item, id) => (
-          <Box sx={{ display: "flex" }}>
-            <Box__Card elevation={0} key={id}>
-              <Box sx={{ top: "-25%" }}>
+          <Box sx={{ display: "flex", paddingTop:"20px" }} key={id}> 
+            <Box__Card elevation={0} >
+              <Box sx={{ mt: "-20px" }}>
                 <Avatar
                   alt="Avatar"
                   src={item.avatar}
@@ -44,7 +42,7 @@ const CardReview = () => {
               <Box
                 sx={{
                   mb: "10px",
-                }}
+                }}magna
               >
                 <Typography>{item.comment}</Typography>
               </Box>

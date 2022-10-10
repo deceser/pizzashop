@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "@mui/material/Container";
 
 import { useSelector, useDispatch } from "react-redux";
 import { setCartOpen } from "./redux/slices/openCartSlice";
@@ -11,7 +12,8 @@ import Cart from "./components/cart";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import CartPage from "./pages/CartPage";
-import Container from "@mui/material/Container";
+import Footer from "./components/footer";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +38,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Container>
+      <Footer/>
     </div>
   );
 }

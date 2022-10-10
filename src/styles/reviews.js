@@ -3,11 +3,11 @@ import { Box } from "@mui/system";
 
 export const Box__Review = styled(Box)(() => ({
   height: "300px",
+  padding:"50px",
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
-  paddingLeft: "40px",
 }));
 
 export const Box__Card = styled(Box)(() => ({

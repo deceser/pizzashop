@@ -177,10 +177,23 @@ export const Button__BuyNow = styled(Button)(() => ({
   },
 }));
 
-export const Button__AboutUS = styled(Button)(() => ({
-  color: "#FE5F1E",
-  padding: "0",
-  mb: "30px",
+export const Button__CallBack = styled(Button)(() => ({
+  color: "#fff",
+  borderRadius: 30,
+  backgroundColor: "#8DCC03",
+  width: 150,
+  height: 40,
+  fontWeight: "bold",
+  textTransform: "none",
+  transition: "0.3s ease-in-out",
+  ":hover": {
+    backgroundColor: "#8DCC03",
+    textTransform: "none",
+    transform: "scale(1.1)",
+    fontWeight: "bold",
+    textTransform: "none",
+    color: "#fff",
+  },
 }));
 
 export const Button__Oppening = styled(Button)(() => ({
