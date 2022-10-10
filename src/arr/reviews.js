@@ -31,22 +31,22 @@ const reviews = [
     name: "Luhui Dmytro",
     raiting: 2,
   },
-  //   {
-  //     id: 4,
-  //     avatar: "",
-  //     comment:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-  //     name: "Luhui Bogdan",
-  //     raiting: 2,
-  //   },
-  //   {
-  //     id: 5,
-  //     avatar: "",
-  //     comment:
-  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-  //     name: "Luhui Rodion",
-  //     raiting: 2,
-  //   },
+  {
+    id: 4,
+    avatar: "",
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    name: "Luhui Bogdan",
+    raiting: 2,
+  },
+  {
+    id: 5,
+    avatar: "",
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    name: "Luhui Rodion",
+    raiting: 2,
+  },
 ];
 
 export default reviews;

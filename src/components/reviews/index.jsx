@@ -11,21 +11,20 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Box__Review } from "../../styles/reviews";
 import CardReview from "./CardReview";
-
+import reviews from "../../arr/reviews";
+import { Box__Card } from "../../styles/reviews";
 const settings = {
-  infinite: true,
   dots: true,
+  arrows: false,
+  infinite: true,
   speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToShow: 2,
+  slidesToScroll: 2,
 };
-
 
 const Reviews = () => {
   return (
-    <Box sx={{display:"flex"}}>
-    
-    <Box__Review>
+    <Box__Review className="">
       <Box sx={{ maxWidth: "390px" }}>
         <Typography sx={{ fontWeight: "bold", fontSize: "20px", mb: "30px" }}>
           What Our Customers Say
@@ -35,13 +34,8 @@ const Reviews = () => {
           eiusmod tempor incididunt ut labore et dolore magna
         </Typography>
       </Box>
-
-     
+      <CardReview />
     </Box__Review>
-    <CardReview />
-    </Box>
-    
-    
   );
 };
 export default Reviews;

@@ -13,27 +13,39 @@ import reviews from "../../arr/reviews";
 import { Box__Card } from "../../styles/reviews";
 
 const settings = {
-  infinite: true,
   dots: true,
+  arrows: false,
+  infinite: true,
   speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 3,
+  slidesToShow: 2,
+  slidesToScroll: 2,
 };
 
 const CardReview = () => {
   return (
-        <Slider {...settings}>
-        <Box sx={{ display: "flex" }}>
-      {reviews.map((item, id) => (
+    <Box
+      className="1234"
+      sx={{
+        maxWidth: "700px",
+        pr: "0px",
+      }}
+    >
+      <Slider {...settings}>
+        {reviews.map((item, id) => (
+          <Box sx={{ display: "flex" }}>
             <Box__Card elevation={0} key={id}>
-              <Box sx={{ mt: "-30px", mb: "10px" }}>
+              <Box sx={{ top: "-25%" }}>
                 <Avatar
                   alt="Avatar"
                   src={item.avatar}
                   sx={{ width: 60, height: 60 }}
                 />
               </Box>
-              <Box sx={{ mb: "10px" }}>
+              <Box
+                sx={{
+                  mb: "10px",
+                }}
+              >
                 <Typography>{item.comment}</Typography>
               </Box>
               <Box>
@@ -49,12 +61,10 @@ const CardReview = () => {
                 />
               </Box>
             </Box__Card>
-      ))}
+          </Box>
+        ))}
+      </Slider>
     </Box>
-        </Slider>
-
-
-   
   );
 };
 export default CardReview;
