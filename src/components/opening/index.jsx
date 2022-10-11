@@ -24,10 +24,10 @@ const OpeningTime = () => {
   const [modalOpen, setModalOpen] = React.useState(false);
   const handleOpen = () => setModalOpen(true);
   const handleClose = () => setModalOpen(false);
+
   return (
     <>
       <Reserv handleClose={handleClose} modalOpen={modalOpen} />
-
       <Paper style={styles.gridContainer} elevation={0}>
         <Box__Container>
           <Card__Opening>

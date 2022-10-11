@@ -71,7 +71,7 @@ export const Button__Categories = styled(Button)(() => ({
 
 export const Button__Header = styled(Button)(() => ({
   marginLeft: "10px",
-  width: "120px",
+  width: "auto",
   height: "40px",
   background: "#F3F3F3",
   borderRadius: "30px",
@@ -79,6 +79,7 @@ export const Button__Header = styled(Button)(() => ({
   fontWeight: "bold",
   textTransform: "none",
   transition: "0.3s ease-in-out",
+  padding:" 0 25px 0 25px",
 
   ":hover": {
     background: "#F3F3F3",
@@ -203,11 +204,12 @@ export const Button__AboutUs = styled(Button)(() => ({
   color: "black",
   backgroundColor: "#F3F3F3",
   borderRadius: 30,
-  width: "120px",
+  width: "auto",
   height: "40px",
   fontWeight: "bold",
   textTransform: "none",
   transition: "0.2s ease-in-out",
+  padding:"0 25px 0 25px",
   ":hover": {
     transform: "scale(1.1) ",
     color: "black",

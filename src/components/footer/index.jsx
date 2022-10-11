@@ -30,9 +30,19 @@ const Footer = () => {
             className="CallBack"
             sx={{ display: "flex", ml: "100px", flexGrow: "1" }}
           >
-            <Typography sx={{ fontWeight: "bold" }}>
-              +38 (099) 222 33 11
-            </Typography>
+            <a
+              href="tel:+38 (099) 222 33 11"
+              style={{ textDecoration: "none" }}
+            >
+              <Typography
+                sx={{
+                  fontWeight: "bold",
+                  color: "black",
+                }}
+              >
+                +38 (099) 222 33 11
+              </Typography>
+            </a>
           </Box>
           <Box sx={{ display: "flex", flexGrow: "1" }}>
             <Menu />

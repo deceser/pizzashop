@@ -7,12 +7,21 @@ import "react-phone-input-2/lib/material.css";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
+import { Button__CallBack } from "../../styles/button";
 import { Box__Modal } from "../../styles/reservModal";
 import { Box } from "@mui/material";
+import CallBackDone from "./CallBackDone";
 
 const Reserv = ({ handleClose, modalOpen }) => {
+  const [doneOpen, setDoneOpen] = React.useState(false);
+  const modalDoneOpen = () => setDoneOpen(true);
+  const handleDoneClose = () => setDoneOpen(false);
   return (
     <div>
+      <CallBackDone
+        handleDoneClose={handleDoneClose}
+        modalDoneOpen={doneOpen}
+      />
       <Modal open={modalOpen} onClose={handleClose}>
         <Box__Modal>
           <Box
@@ -34,6 +43,9 @@ const Reserv = ({ handleClose, modalOpen }) => {
 
             <Box>
               <PhoneInput country="ua" regions={"europe"} />
+            </Box>
+            <Box sx={{ mt: "50px" }}>
+              <Button__CallBack>Call Back</Button__CallBack>
             </Box>
           </Box>
         </Box__Modal>

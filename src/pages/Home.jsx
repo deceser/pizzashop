@@ -66,7 +66,10 @@ function Home() {
       </section>
 
       <Icons />
-      <Opening />
+      <section id="reserv">
+        <Opening />
+      </section>
+
       <Reviews />
       <LeaveReviews />
     </>
