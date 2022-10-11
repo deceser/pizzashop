@@ -19,6 +19,12 @@ export default function Category({ value, clickCategory }) {
             key={index}
             onClick={() => clickCategory(index)}
             variant="outlined"
+            sx={{
+              background: value === index ? "#8DCC03" : "",
+              borderRadius: value === index ? "20px" : "",
+              color: value === index ? "white" : "",
+              border: value === index ? "1px solid #8DCC03" : "",
+            }}
           >
             {title.title}
           </Button__Categories>

@@ -11,6 +11,7 @@ import background3 from "../../assets/image/background3.png";
 import Header from "./Header";
 import Title from "./TitleOpen";
 import TimeTable from "./TimeTable";
+import Reserv from "./Reserv";
 
 const styles = {
   gridContainer: {
@@ -20,26 +21,37 @@ const styles = {
 };
 
 const OpeningTime = () => {
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const handleOpen = () => setModalOpen(true);
+  const handleClose = () => setModalOpen(false);
   return (
-    <Paper style={styles.gridContainer} elevation={0}>
-      <Box__Container>
-        <Card__Opening>
-          <Header />
-          <CardContent>
-            <Title />
-            <TimeTable />
-            <Box sx={{ display: "flex", justifyContent: "center", mb: "10px" }}>
-              <Typography variant="caption" sx={{ color: "#676767" }}>
-                Book your table for lunch or dinner
-              </Typography>
-            </Box>
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <Button__Oppening>Book Now</Button__Oppening>
-            </Box>
-          </CardContent>
-        </Card__Opening>
-      </Box__Container>
-    </Paper>
+    <>
+      <Reserv handleClose={handleClose} modalOpen={modalOpen} />
+
+      <Paper style={styles.gridContainer} elevation={0}>
+        <Box__Container>
+          <Card__Opening>
+            <Header />
+            <CardContent>
+              <Title />
+              <TimeTable />
+              <Box
+                sx={{ display: "flex", justifyContent: "center", mb: "10px" }}
+              >
+                <Typography variant="caption" sx={{ color: "#676767" }}>
+                  Book your table for lunch or dinner
+                </Typography>
+              </Box>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <Button__Oppening onClick={handleOpen}>
+                  Book Now
+                </Button__Oppening>
+              </Box>
+            </CardContent>
+          </Card__Opening>
+        </Box__Container>
+      </Paper>
+    </>
   );
 };
 export default OpeningTime;

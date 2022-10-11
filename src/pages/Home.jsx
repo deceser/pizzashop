@@ -11,8 +11,7 @@ import About from "../components/about";
 import Icons from "../components/icons";
 import Opening from "../components/opening";
 import Reviews from "../components/reviews";
-import LeaveReviews from "../components/leaveReviews"
-
+import LeaveReviews from "../components/leaveReviews";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -21,7 +20,7 @@ function Home() {
   const [showItem, setShowItem] = React.useState(4);
 
   const clickShowItem = () => {
-    setShowItem((value) => value + 4);
+    setShowItem(showItem + 4);
   };
 
   const dispatch = useDispatch();
@@ -62,11 +61,14 @@ function Home() {
       >
         <ViewAll clickShowItem={clickShowItem} />
       </Box>
-      <About />
+      <section id="about">
+        <About />
+      </section>
+
       <Icons />
       <Opening />
       <Reviews />
-      <LeaveReviews/>
+      <LeaveReviews />
     </>
   );
 }

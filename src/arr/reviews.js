@@ -13,7 +13,7 @@ const reviews = [
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
     name: "Luhui Evgen",
-    raiting: 2,
+    raiting: 3,
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const reviews = [
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
     name: "Luhui Denys",
-    raiting: 2,
+    raiting: 1,
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const reviews = [
     comment:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
     name: "Luhui Dmytro",
-    raiting: 2,
+    raiting: 4,
   },
   {
     id: 4,

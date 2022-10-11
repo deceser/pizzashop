@@ -7,7 +7,6 @@ import Container from "@mui/material/Container";
 import Logo from "./Logo";
 import Title from "./Title";
 import Menu from "../button/Menu";
-import SpecialButton from "../button/SpecialOffers";
 import SingIn from "../button/SingIn";
 import OpenCart from ".././button/OpenCart";
 
@@ -25,7 +24,6 @@ export default function Header({ openClickCart }) {
           <Logo />
           <Title />
           <Menu />
-          <SpecialButton />
           <SingIn />
           <OpenCart openClickCart={openClickCart} />
         </Toolbar>

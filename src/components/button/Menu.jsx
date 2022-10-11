@@ -7,7 +7,7 @@ import { Button__Header } from "../../styles/button";
 export default function Menu() {
   const navigate = useNavigate();
   return (
-    <Box>
+    <Box sx={{ mr: "10px" }}>
       <Button__Header onClick={() => navigate("/menu")}>Menu</Button__Header>
     </Box>
   );

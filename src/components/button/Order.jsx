@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Button__Order } from "../../styles/button";
 
-const Order = ({}) => {
+const Order = ({ cartClose }) => {
   const navigate = useNavigate();
   return (
     <Box sx={{ display: "flex", justifyContent: "center", p: "20px" }}>

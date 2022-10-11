@@ -30,8 +30,8 @@ const CardReview = () => {
     >
       <Slider {...settings}>
         {reviews.map((item, id) => (
-          <Box sx={{ display: "flex", paddingTop:"20px" }} key={id}> 
-            <Box__Card elevation={0} >
+          <Box sx={{ display: "flex", paddingTop: "20px" }} key={id}>
+            <Box__Card elevation={0}>
               <Box sx={{ mt: "-20px" }}>
                 <Avatar
                   alt="Avatar"
@@ -41,15 +41,14 @@ const CardReview = () => {
               </Box>
               <Box
                 sx={{
-                  mb: "10px",
-                }}magna
+                  m: "10px 0 10px 0",
+                }}
               >
                 <Typography>{item.comment}</Typography>
               </Box>
               <Box>
                 <Typography sx={{ fontWeight: "bold" }}>{item.name}</Typography>
               </Box>
-
               <Box>
                 <Rating
                   name="half-rating-read"

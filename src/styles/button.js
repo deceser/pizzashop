@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const Button__ViewAll = styled(Button)(() => ({
@@ -38,23 +38,6 @@ export const Button__Categories = styled(Button)(() => ({
     fontWeight: "bold",
     textTransform: "none",
   },
-
-  ":focus": {
-    backgroundColor: "#8DCC03",
-    color: "white",
-    border: "1px solid #8DCC03",
-    transform: "scale(1.1)",
-    fontWeight: "bold",
-    textTransform: "none",
-  },
-  ":active": {
-    backgroundColor: "#8DCC03",
-    color: "white",
-    border: "1px solid #8DCC03",
-    transform: "scale(1.1)",
-    fontWeight: "bold",
-    textTransform: "none",
-  },
 }));
 
 // export const Button__Active = styled(Button)(() => ({
@@ -88,7 +71,8 @@ export const Button__Categories = styled(Button)(() => ({
 
 export const Button__Header = styled(Button)(() => ({
   marginLeft: "10px",
-  width: "auto",
+  width: "120px",
+  height: "40px",
   background: "#F3F3F3",
   borderRadius: "30px",
   color: "black",
@@ -212,5 +196,31 @@ export const Button__Oppening = styled(Button)(() => ({
     fontWeight: "bold",
     textTransform: "none",
     color: "#fff",
+  },
+}));
+
+export const Button__AboutUs = styled(Button)(() => ({
+  color: "black",
+  backgroundColor: "#F3F3F3",
+  borderRadius: 30,
+  width: "120px",
+  height: "40px",
+  fontWeight: "bold",
+  textTransform: "none",
+  transition: "0.2s ease-in-out",
+  ":hover": {
+    transform: "scale(1.1) ",
+    color: "black",
+    backgroundColor: "#F3F3F3",
+    textTransform: "none",
+  },
+}));
+
+export const Button__Icon = styled(IconButton)(() => ({
+  color: "black",
+  ":hover": {
+    backgroundColor: "white",
+    color: "black",
+    cursor: "pointer",
   },
 }));
