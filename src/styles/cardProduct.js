@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { Card } from "@mui/material";
+import { Card, Grid } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import { Button } from "@mui/material";
 import { Box } from "@mui/system";
@@ -7,21 +7,20 @@ import { Box } from "@mui/system";
 export const Box__ProductCard = styled(Box)(() => ({
   display: "flex",
   flexWrap: "wrap",
-  justifyContent: "space-around",
+  justifyContent: "center",
 }));
 
 export const Card__Product = styled(Card)(() => ({
   padding: "20px",
-  display: "flex",
-  flexDirection: "column",
+  display: "grid",
   alignItems: "center",
+  justifyItems: "center",
 }));
 
 export const Card__Media = styled(CardMedia)(() => ({
   width: "250px",
   height: "250px",
   flexDirection: "column",
-
   transition: "0.3s ease-in-out",
   ":hover": {
     transform: "scale(1.1)",

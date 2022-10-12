@@ -14,7 +14,6 @@ import Menu from "./pages/Menu";
 import CartPage from "./pages/CartPage";
 import Footer from "./components/footer";
 
-
 function App() {
   const dispatch = useDispatch();
   const CartOpen = useSelector((state) => state.openCartSlice.CartOpen);
@@ -38,7 +37,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Container>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

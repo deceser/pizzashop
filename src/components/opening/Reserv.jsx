@@ -45,7 +45,9 @@ const Reserv = ({ handleClose, modalOpen }) => {
               <PhoneInput country="ua" regions={"europe"} />
             </Box>
             <Box sx={{ mt: "50px" }}>
-              <Button__CallBack>Call Back</Button__CallBack>
+              <Button__CallBack onClick={handleClose}>
+                Call Back
+              </Button__CallBack>
             </Box>
           </Box>
         </Box__Modal>
