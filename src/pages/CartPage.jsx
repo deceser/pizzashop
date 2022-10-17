@@ -11,5 +11,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-
-// page

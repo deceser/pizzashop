@@ -25,6 +25,7 @@ function App() {
   const CloseClickCart = () => {
     dispatch(setCartOpen(false));
   };
+
   // const [openCart, setOpenCart] = React.useState(false);
   return (
     <div>
