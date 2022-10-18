@@ -24,6 +24,7 @@ export default function Category({ value, clickCategory }) {
               borderRadius: value === index ? "20px" : "",
               color: value === index ? "white" : "",
               border: value === index ? "1px solid #8DCC03" : "",
+              transform: value === index ? "scale(1.1)" : "",
             }}
           >
             {title.title}
