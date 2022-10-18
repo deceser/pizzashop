@@ -10,7 +10,8 @@ import "./index.css";
 import Header from "./components/header";
 import Cart from "./components/cart";
 import Home from "./pages/Home";
-import Menu from "./pages/Menu";
+import SingIn from "./pages/SingInPage";
+import Menu from "./pages/MenuPage";
 import CartPage from "./pages/CartPage";
 import Footer from "./components/footer";
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/SingIn" element={<SingIn />} />
         </Routes>
       </Container>
       <Footer />

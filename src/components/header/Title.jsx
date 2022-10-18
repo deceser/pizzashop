@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 
 import { Box__Title } from "../../styles/header";
 const Title = () => {
@@ -11,6 +10,7 @@ const Title = () => {
           color: "#333333",
           fontWeight: "bold",
           backgroundColor: "white",
+          fontFamily: "Roboto",
         }}
         variant="title"
       >

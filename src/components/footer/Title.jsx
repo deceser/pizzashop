@@ -11,6 +11,7 @@ const Title = () => {
           color: "#333333",
           fontWeight: "bold",
           backgroundColor: "white",
+          fontFamily: "Roboto",
         }}
         variant="title"
       >

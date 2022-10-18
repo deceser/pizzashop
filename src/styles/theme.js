@@ -9,3 +9,11 @@ export const theme = createTheme({
     },
   },
 });
+// const theme = createMuiTheme({
+//   typography: {
+//     fontFamily: font,
+//     button:
+//       textTransform: "none"
+//     }
+//   }
+// });

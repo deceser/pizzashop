@@ -45,6 +45,7 @@ export const Button__SelectedType = styled(Button)(() => ({
   marginBottom: "5px",
   borderRadius: "5px",
   textTransform: "lowercase",
+  fontSize: "0.850rem",
   width: "150px",
   height: "35px",
   color: "black",
@@ -63,6 +64,7 @@ export const Button__SelectedSize = styled(Button)(() => ({
   width: "95px",
   height: "35px",
   color: "black",
+  fontSize: "0.850rem",
   fontWeight: "bold",
   mt: "4px",
   ":hover": {

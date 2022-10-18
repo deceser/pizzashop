@@ -8,6 +8,7 @@ export const Button__ViewAll = styled(Button)(() => ({
   width: 200,
   height: 40,
   fontWeight: "bold",
+  fontSize: "0.850rem",
   textTransform: "none",
   transition: "0.3s ease-in-out",
   ":hover": {
@@ -26,6 +27,7 @@ export const Button__Categories = styled(Button)(() => ({
   borderRadius: "20px",
   border: "1px solid #000000",
   fontWeight: "bold",
+  fontSize: "0.850rem",
   textTransform: "none",
   transition: "0.3s ease-in-out",
 
@@ -77,9 +79,10 @@ export const Button__Header = styled(Button)(() => ({
   borderRadius: "30px",
   color: "black",
   fontWeight: "bold",
+  fontSize: "0.850rem",
   textTransform: "none",
   transition: "0.3s ease-in-out",
-  padding:" 0 25px 0 25px",
+  padding: " 0 25px 0 25px",
 
   ":hover": {
     background: "#F3F3F3",
@@ -96,6 +99,7 @@ export const ButtonGroup__Header = styled(Button)(() => ({
   justifyContent: "space-evenly",
   textAlign: "center",
   height: "40px",
+  fontSize: "0.850rem",
   width: "120px",
   background: "#FE5F1E",
   borderRadius: "30px",
@@ -111,6 +115,7 @@ export const Button__Slider = styled(Button)(() => ({
   backgroundColor: "#8DCC03",
   borderRadius: "20px",
   fontWeight: "bold",
+  fontSize: "0.850rem",
   textTransform: "none",
   transition: "0.3s ease-in-out",
 
@@ -132,6 +137,7 @@ export const Button__Order = styled(Button)(() => ({
   height: 40,
   fontWeight: "bold",
   textTransform: "none",
+  fontSize: "0.850rem",
   transition: "0.3s ease-in-out",
   ":hover": {
     backgroundColor: "#FE5F1E",
@@ -149,6 +155,7 @@ export const Button__BuyNow = styled(Button)(() => ({
   backgroundColor: "#FE5F1E",
   width: 150,
   height: 40,
+  fontSize: "0.850rem",
   fontWeight: "bold",
   textTransform: "none",
   transition: "0.3s ease-in-out",
@@ -169,6 +176,7 @@ export const Button__CallBack = styled(Button)(() => ({
   width: 150,
   height: 40,
   fontWeight: "bold",
+  fontSize: "0.850rem",
   textTransform: "none",
   transition: "0.3s ease-in-out",
   ":hover": {
@@ -187,6 +195,7 @@ export const Button__Oppening = styled(Button)(() => ({
   backgroundColor: "#FE5F1E",
   width: 200,
   height: 40,
+  fontSize: "0.850rem",
   fontWeight: "bold",
   textTransform: "none",
   transition: "0.3s ease-in-out",
@@ -208,8 +217,9 @@ export const Button__AboutUs = styled(Button)(() => ({
   height: "40px",
   fontWeight: "bold",
   textTransform: "none",
+  fontSize: "0.850rem",
   transition: "0.2s ease-in-out",
-  padding:"0 25px 0 25px",
+  padding: "0 25px 0 25px",
   ":hover": {
     transform: "scale(1.1) ",
     color: "black",
@@ -224,5 +234,25 @@ export const Button__Icon = styled(IconButton)(() => ({
     backgroundColor: "white",
     color: "black",
     cursor: "pointer",
+  },
+}));
+
+export const Button__LogIn = styled(Button)(() => ({
+  color: "#fff",
+  borderRadius: 30,
+  backgroundColor: "#FE5F1E",
+  width: 100,
+  height: 40,
+  fontWeight: "bold",
+  textTransform: "none",
+  fontSize: "0.850rem",
+  transition: "0.3s ease-in-out",
+  ":hover": {
+    backgroundColor: "#FE5F1E",
+    textTransform: "none",
+    transform: "scale(1.1)",
+    fontWeight: "bold",
+    textTransform: "none",
+    color: "#fff",
   },
 }));
