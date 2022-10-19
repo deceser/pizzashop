@@ -29,7 +29,7 @@ function App() {
 
   // const [openCart, setOpenCart] = React.useState(false);
   return (
-    <div>
+    <>
       <Cart cartOpen={CartOpen} cartClose={CloseClickCart} />
       <Header openClickCart={clickCart} />
       <Container style={{ padding: "0px", backgroundColor: "#fff" }}>
@@ -41,7 +41,7 @@ function App() {
         </Routes>
       </Container>
       <Footer />
-    </div>
+    </>
   );
 }
 export default App;

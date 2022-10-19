@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Button__Order } from "../../styles/button";
 
-const Order = ({}) => {
+const Order = ({ cartClose }) => {
   const navigate = useNavigate();
   const clkickOrder = () => {
     navigate("/cart");

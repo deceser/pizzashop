@@ -19,7 +19,7 @@ export default function Cart({ cartOpen, cartClose }) {
         </Cart__Header>
         <CartItem />
         <Price />
-        <Order />
+        <Order cartClose={cartClose} />
       </Drawer>
     </Container>
   );

@@ -1,17 +1,26 @@
 import { styled } from "@mui/material/styles";
-import { Card, Grid } from "@mui/material";
+import { Card } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 
-export const Box__ProductCard = styled(Box)(() => ({
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center",
+export const Box__ProductCard = styled(Box)(({ theme }) => ({
+  display: "grid",
+  gridTemplateColumns: "repeat(4, 1fr)",
+  gridTemplateRows: "repeat(1, 1fr)",
+  gridColumnGap: "20px",
+  gridRowGap: "20px",
+
+  ["@media screen and (min-width: 1000px) and (max-width: 1366px)"]: {
+    gridTemplateColumns: "repeat(2, 1fr)",
+  },
+  ["@media screen and (min-width: 700px) and (max-width: 1000px)"]: {
+    gridTemplateColumns: "repeat(1, 1fr)",
+  },
 }));
 
-export const Card__Product = styled(Card)(() => ({
-  padding: "20px",
+export const Card__Product = styled(Card)(({ theme }) => ({
+  paddingTop: "20px",
   display: "grid",
   alignItems: "center",
   justifyItems: "center",
@@ -20,7 +29,6 @@ export const Card__Product = styled(Card)(() => ({
 export const Card__Media = styled(CardMedia)(() => ({
   width: "250px",
   height: "250px",
-  flexDirection: "column",
   transition: "0.3s ease-in-out",
   ":hover": {
     transform: "scale(1.1)",

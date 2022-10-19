@@ -1,6 +1,6 @@
 import React from "react";
 import { Button__ViewAll } from "../../styles/button";
-const ViewAll = ({ clickShowItem }) => {
+const ViewAll = ({ clickShowItem, clickHiddenItem }) => {
   return (
     <Button__ViewAll variant="contained" onClick={clickShowItem}>
       View All

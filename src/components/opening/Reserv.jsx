@@ -10,11 +10,11 @@ import { Button__CallBack } from "../../styles/button";
 import { Box__Modal } from "../../styles/reservModal";
 import { Box } from "@mui/material";
 import CallBackDone from "./CallBackDone";
-
 const Reserv = ({ handleClose, modalOpen }) => {
   const [doneOpen, setDoneOpen] = React.useState(false);
   const modalDoneOpen = () => setDoneOpen(true);
   const handleDoneClose = () => setDoneOpen(false);
+
   return (
     <div>
       <CallBackDone
