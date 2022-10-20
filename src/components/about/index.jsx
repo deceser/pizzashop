@@ -15,9 +15,7 @@ const About = () => {
           <img src={about} alt="pic" width="450" />
         </Box>
         <Box sx={{ mt: "120px", maxWidth: "450px" }}>
-        <Typography color="#FE5F1E">
-          About Us
-        </Typography>
+          <Typography color="#FE5F1E">About Us</Typography>
           <Box>
             <Typography
               sx={{ fontWeight: "bold", mt: "10px", fontSize: "20px" }}

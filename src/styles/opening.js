@@ -7,6 +7,12 @@ export const Box__Container = styled(Box)(() => ({
   justifyContent: "flex-end",
   paddingTop: "100px",
   paddingRight: "70px",
+  ["@media screen and (min-width: 1000px) and (max-width: 1115px)"]: {
+    justifyContent: "space-around",
+  },
+  ["@media screen and (min-width: 700px) and (max-width: 1000px)"]: {
+    justifyContent: "space-around",
+  },
 }));
 
 export const Card__Opening = styled(Card)(() => ({

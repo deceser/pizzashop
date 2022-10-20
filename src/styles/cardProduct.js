@@ -11,7 +11,7 @@ export const Box__ProductCard = styled(Box)(({ theme }) => ({
   gridColumnGap: "20px",
   gridRowGap: "20px",
 
-  ["@media screen and (min-width: 1000px) and (max-width: 1366px)"]: {
+  ["@media screen and (min-width: 1000px) and (max-width: 1115px)"]: {
     gridTemplateColumns: "repeat(2, 1fr)",
   },
   ["@media screen and (min-width: 700px) and (max-width: 1000px)"]: {
