@@ -40,15 +40,20 @@ function Home() {
       <SliderBlock />
       <Box sx={{ display: "flex", justifyContent: "center", m: "30px" }}>
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-          Delicious Pizza
+          Bestseller
         </Typography>
       </Box>
       <CardGreed products={products.filter((item) => item.special === 1)} />
-      <Box sx={{ display: "flex", justifyContent: "center", mb: "40px" }}>
-        <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-          Discover Our menu
-        </Typography>
-      </Box>
+      <section id="menu">
+        <Box
+          sx={{ display: "flex", justifyContent: "center", m: "40px 0 40px 0" }}
+        >
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Discover Our menu
+          </Typography>
+        </Box>
+      </section>
+
       <Box
         sx={{
           m: "-20px 0 0 -20px ",
@@ -67,12 +72,14 @@ function Home() {
       >
         <img src={berry} alt="berry" width="100px" height="100px" />
       </Box>
+
       <Categories value={category} clickCategory={clickCategory} />
       <CardGreed
         products={products
           .filter((item) => item.category === category)
           .slice(0, showItem)}
       />
+
       <Box
         sx={{
           display: "flex",

@@ -6,7 +6,7 @@ import { Box__Title } from "../../styles/header";
 import pizzalogo from "../../assets/image/pizzalogo.png";
 const Logo = () => {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", mr: "25px", mb: "-40px" }}>
       <img src={pizzalogo} alt="logo" width="150px" height="150px" />
 
       <Box__Title>

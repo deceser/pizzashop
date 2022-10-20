@@ -8,7 +8,7 @@ export default function SpecialButton() {
   return (
     <Box sx={{ marginLeft: "auto" }}>
       <Button__Header onClick={() => navigate("/SingIn")}>
-        Sing In
+        Log in
       </Button__Header>
     </Box>
   );

@@ -23,7 +23,7 @@ const SingIn = () => {
   return (
     <>
       <Registration registration={registration} handleClose={handleClose} />
-      <Container sx={{ p: "80px" }}>
+      <Container style={{ padding: "80px" }}>
         <Box
           sx={{
             display: "flex",
@@ -49,6 +49,7 @@ const SingIn = () => {
             placeholder="Password"
             color="info"
           />
+
           <Box sx={{ display: "flex", mt: "10px" }}>
             <Register handleClickOpen={handleClickOpen} />
             <LogIn />
