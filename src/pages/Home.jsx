@@ -13,6 +13,8 @@ import Opening from "../components/opening";
 import Reviews from "../components/reviews";
 import LeaveReviews from "../components/leaveReviews";
 
+import { Box__SmartObject, Box__Layer, Box__Layer2 } from "../styles/layer";
+
 import chees from "../assets/before/chees.png";
 import berry from "../assets/before/berry.png";
 import layer1 from "../assets/before/layer1.png";
@@ -53,42 +55,19 @@ function Home() {
           </Typography>
         </Box>
       </section>
-
-      <Box
-        sx={{
-          m: "-20px 0 0 -20px ",
-          height: 10,
-        }}
-      >
+      <Box__Layer>
         <img src={layer1} alt="berry" width="80px" height="80px" />
-      </Box>
-      <Box
-        sx={{
-          m: "-20px -30px 0 0",
-          height: 10,
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      >
+      </Box__Layer>
+      <Box__SmartObject>
         <img src={berry} alt="berry" width="100px" height="100px" />
-      </Box>
-
+      </Box__SmartObject>
       <Categories value={category} clickCategory={clickCategory} />
       <CardGreed
         products={products
           .filter((item) => item.category === category)
           .slice(0, showItem)}
       />
-
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          mt: "30px",
-        }}
-      >
-        <ViewAll clickShowItem={clickShowItem} />
-      </Box>
+      <ViewAll clickShowItem={clickShowItem} />
       <Box sx={{ m: "0 0 -50px 50px", width: 50 }}>
         <img src={chees} alt="chees" />
       </Box>
@@ -96,16 +75,9 @@ function Home() {
         <About />
       </section>
       <Icons />
-      <Box
-        sx={{
-          m: "-60px 70px 60px 0",
-          height: 10,
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      >
+      <Box__Layer2>
         <img src={layer2} alt="layer2" width="110px" height="110px" />
-      </Box>
+      </Box__Layer2>
       <section id="reserv">
         <Opening />
       </section>
