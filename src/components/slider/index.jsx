@@ -19,6 +19,7 @@ import Image from "./Image";
 import ButtonSlider from "./ButtonSlider";
 import Title from "./Title";
 import Subtitle from "./Subtitle";
+import { Container } from "@mui/material";
 
 const styles = {
   gridContainer: {

@@ -2,7 +2,6 @@ import React from "react";
 
 import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
-import Container from "@mui/material/Container";
 
 import Logo from "./Logo";
 import Title from "./Title";
