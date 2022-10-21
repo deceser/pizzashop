@@ -14,7 +14,7 @@ export const Box__Layer = styled(Box)(() => ({
 }));
 
 export const Box__Layer2 = styled(Box)(() => ({
-  m: "-60px 70px 60px 0",
+  margin: "-60px 70px 60px 0",
   height: 10,
   display: "flex",
   justifyContent: "flex-end",
