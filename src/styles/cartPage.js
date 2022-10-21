@@ -5,6 +5,9 @@ export const Box__Container = styled(Box)(() => ({
   backgroundColor: "white",
   display: "flex",
   justifyContent: "space-between",
+  ["@media screen and (min-width: 1000px) and (max-width: 1115px)"]: {
+    width: "800px",
+  },
 }));
 
 export const Box__cartHeader = styled(Box)(() => ({
