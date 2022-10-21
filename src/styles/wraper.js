@@ -8,4 +8,7 @@ export const Container__Wraper = styled(Container)(() => ({
   ["@media screen and (min-width: 1000px) and (max-width: 1115px)"]: {
     width: "800px",
   },
+  // ["@media screen and (min-width: 200px) and (max-width: 1000px)"]: {
+  //   width: "800px",
+  // },
 }));

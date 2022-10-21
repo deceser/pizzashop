@@ -1,7 +1,6 @@
 import React from "react";
 
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 
 import Slider from "react-slick";
@@ -28,6 +27,8 @@ const styles = {
 };
 
 const settings = {
+  dots: true,
+  arrows: false,
   speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,

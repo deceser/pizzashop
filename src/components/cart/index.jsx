@@ -11,16 +11,14 @@ import { Cart__Header } from "../../styles/cart";
 
 export default function Cart({ cartOpen, cartClose }) {
   return (
-    <Container>
-      <Drawer onClose={cartClose} open={cartOpen} anchor="right">
-        <Cart__Header>
-          <Title />
-          <CloseCart cartClose={cartClose} />
-        </Cart__Header>
-        <CartItem />
-        <Price />
-        <Order cartClose={cartClose} />
-      </Drawer>
-    </Container>
+    <Drawer onClose={cartClose} open={cartOpen} anchor="right">
+      <Cart__Header>
+        <Title />
+        <CloseCart cartClose={cartClose} />
+      </Cart__Header>
+      <CartItem />
+      <Price />
+      <Order cartClose={cartClose} />
+    </Drawer>
   );
 }

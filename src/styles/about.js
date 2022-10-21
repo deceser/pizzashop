@@ -14,4 +14,9 @@ export const Box__Container = styled(Box)(() => ({
     paddingTop: "10px",
     height: "600px",
   },
+  ["@media screen and (min-width: 200px) and (max-width: 1000px)"]: {
+    flexDirection: "column-reverse",
+    paddingTop: "10px",
+    height: "600px",
+  },
 }));
