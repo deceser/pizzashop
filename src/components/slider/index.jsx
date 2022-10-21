@@ -28,9 +28,12 @@ const styles = {
 };
 
 const settings = {
-  speed: 500,
+  speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  pauseOnHover: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
 };
