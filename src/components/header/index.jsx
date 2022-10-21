@@ -13,23 +13,22 @@ import OpenCart from ".././button/OpenCart";
 
 export default function Header({ openClickCart }) {
   return (
-    <Container sx={{ backgroundColor: "white", borderRadius: "20px 20px 0 0" }}>
-      <AppBar
-        elevation={0}
-        position="static"
-        sx={{
-          padding: " 10px",
-        }}
-      >
-        <Toolbar>
-          <Logo />
-          <Title />
-          <Menu />
-          <Reservation />
-          <SingIn />
-          <OpenCart openClickCart={openClickCart} />
-        </Toolbar>
-      </AppBar>
-    </Container>
+    <AppBar
+      elevation={0}
+      position="static"
+      sx={{
+        padding: " 10px",
+        borderRadius: "10px 10px 0 0",
+      }}
+    >
+      <Toolbar>
+        <Logo />
+        <Title />
+        <Menu />
+        <Reservation />
+        <SingIn />
+        <OpenCart openClickCart={openClickCart} />
+      </Toolbar>
+    </AppBar>
   );
 }

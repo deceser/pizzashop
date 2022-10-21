@@ -12,6 +12,8 @@ import background from "../../assets/image/background.png";
 import { sliders } from "../../arr/sliders";
 import { SampleNextArrow, SamplePrevArrow } from "./ArrowSlider";
 
+import { Slider__Wraper, Box__Wraper } from "../../styles/slider";
+
 import Customers from "./Customers";
 import Delivery from "./Delivery";
 import Image from "./Image";
@@ -39,20 +41,8 @@ const SliderBlock = () => {
       {sliders.map((item, index) => (
         <Box key={index}>
           <Paper style={styles.gridContainer}>
-            <Grid
-              container
-              sx={{ display: "flex", justifyContent: "space-around" }}
-            >
-              <Grid
-                item
-                xs={5}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  mt: "30px",
-                  ml: "30px",
-                }}
-              >
+            <Slider__Wraper>
+              <Box__Wraper>
                 <Title item={item} />
                 <Subtitle item={item} />
                 <ButtonSlider item={item} />
@@ -66,11 +56,9 @@ const SliderBlock = () => {
                   <Customers />
                   <Delivery />
                 </Box>
-              </Grid>
-              <Grid item xs={5}>
-                <Image item={item} />
-              </Grid>
-            </Grid>
+              </Box__Wraper>
+              <Image item={item} />
+            </Slider__Wraper>
           </Paper>
         </Box>
       ))}

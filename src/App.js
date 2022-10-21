@@ -5,8 +5,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCartOpen } from "./redux/slices/openCartSlice";
 
 import { Routes, Route } from "react-router-dom";
-import "./index.css";
 
+import { Container__Wraper } from "./styles/wraper";
+import "./index.css";
 import Header from "./components/header";
 import Cart from "./components/cart";
 import Home from "./pages/Home";
@@ -31,16 +32,16 @@ function App() {
   return (
     <>
       <Cart cartOpen={CartOpen} cartClose={CloseClickCart} />
-      <Header openClickCart={clickCart} />
-      <Container style={{ padding: "0px", backgroundColor: "#fff" }}>
+      <Container__Wraper style={{ padding: "0px" }}>
+        <Header openClickCart={clickCart} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/SingIn" element={<SingIn />} />
         </Routes>
-      </Container>
-      <Footer />
+        <Footer />
+      </Container__Wraper>
     </>
   );
 }
