@@ -1,18 +1,16 @@
 import React from "react";
-import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 
 import TextField from "@mui/material/TextField";
 import { Typography, Box, Paper } from "@mui/material";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/material.css";
+
 import { Button__CallBack } from "../../styles/button";
 
 const Registration = ({ registration, handleClose }) => {
   return (
     <div>
       <Dialog open={registration} onClose={handleClose}>
-        <Box sx={{ height: "450px", width: "500px" }}>
+        <Box sx={{ height: "420px", width: "500px" }}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Typography sx={{ fontWeight: "bold", fontSize: "30px" }}>
               Create Account
@@ -95,16 +93,7 @@ const Registration = ({ registration, handleClose }) => {
               color="info"
             />
           </Box>
-          <Box>
-            <PhoneInput
-              country="ua"
-              regions={"europe"}
-              inputStyle={{
-                marginLeft: "10px",
-                width: "480px",
-              }}
-            />
-          </Box>
+
           <Box sx={{ display: "flex", justifyContent: "center", mt: "20px" }}>
             <Button__CallBack>Registration</Button__CallBack>
           </Box>
