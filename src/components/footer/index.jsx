@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Title from "./Title";
 import Menu from "../button/Menu";
 import AboutUs from "../button/AboutUs";
+import CallBack from "../button/CallBack";
 import { Button__Icon } from "../../styles/button";
 
 import Toolbar from "@mui/material/Toolbar";
@@ -25,7 +26,16 @@ const Footer = () => {
       <Toolbar>
         <Logo />
         <Title />
-        <Box sx={{ display: "flex", ml: "100px", flexGrow: "1" }}>
+        <Box
+          sx={{
+            display: "flex",
+            ml: "100px",
+            flexGrow: "1",
+            ["@media screen and (min-width: 0px) and (max-width: 1115px)"]: {
+              display: "none",
+            },
+          }}
+        >
           <a href="tel:+38 (099) 222 33 11" style={{ textDecoration: "none" }}>
             <Typography
               sx={{
@@ -38,6 +48,9 @@ const Footer = () => {
           </a>
         </Box>
         <Box sx={{ display: "flex", flexGrow: "1" }}>
+          <a href="tel:+38 (099) 222 33 11" style={{ textDecoration: "none" }}>
+            <CallBack />
+          </a>
           <Menu />
           <AboutUs />
         </Box>

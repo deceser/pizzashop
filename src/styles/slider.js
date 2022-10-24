@@ -9,6 +9,10 @@ export const Slider__Wraper = styled(Box)(() => ({
     flexWrap: "nowrap",
     width: "1000px",
   },
+  ["@media screen and (min-width: 200px) and (max-width: 1000px)"]: {
+    width: "900px",
+    height: "410px",
+  },
 }));
 
 export const Box__Wraper = styled(Box)(() => ({
