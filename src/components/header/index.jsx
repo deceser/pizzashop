@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
@@ -7,10 +8,14 @@ import Logo from "./Logo";
 import Title from "./Title";
 import Menu from "../button/Menu";
 import Reservation from "../button/SpecialOffers";
-import SingIn from "../button/SingIn";
+import LogIn from "../button/LogIn";
 import OpenCart from ".././button/OpenCart";
 
 export default function Header({ openClickCart }) {
+  const navigate = useNavigate();
+  const clickAuth = () => {
+    navigate("/authorization");
+  };
   return (
     <AppBar
       elevation={0}
@@ -25,7 +30,7 @@ export default function Header({ openClickCart }) {
         <Title />
         <Menu />
         <Reservation />
-        <SingIn />
+        <LogIn clickAuth={clickAuth} />
         <OpenCart openClickCart={openClickCart} />
       </Toolbar>
     </AppBar>

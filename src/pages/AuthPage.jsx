@@ -1,10 +1,10 @@
 import React from "react";
-import SingUp from "../components/singUp";
+import Auth from "../components/authPage";
 
 const SingUpPage = () => {
   return (
     <>
-      <SingUp />
+      <Auth />
     </>
   );
 };

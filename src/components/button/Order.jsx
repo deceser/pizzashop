@@ -1,6 +1,5 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { useNavigate } from "react-router-dom";
 
 import { Button__Order } from "../../styles/button";
 

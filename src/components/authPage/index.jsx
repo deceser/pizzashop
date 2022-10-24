@@ -7,9 +7,9 @@ import TextField from "@mui/material/TextField";
 import Registration from "../registrationForm";
 import Logo from "./Logo";
 import Register from "../button/Register";
-import LogIn from "../button/LogIn";
+import SingIn from "../button/SingIn";
 
-const SingIn = () => {
+const Auth = () => {
   const [registration, setRegistration] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -52,11 +52,11 @@ const SingIn = () => {
 
           <Box sx={{ display: "flex", mt: "10px" }}>
             <Register handleClickOpen={handleClickOpen} />
-            <LogIn />
+            <SingIn />
           </Box>
         </Box>
       </Container>
     </>
   );
 };
-export default SingIn;
+export default Auth;

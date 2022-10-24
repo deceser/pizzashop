@@ -1,32 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+// import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  CartOpen: false,
-};
+// const initialState = {
+//   CartOpen: false,
+// };
 
-//  const categorySlice = createSlice ({
-//   name: "categories",
+// const openCartSlice = createSlice({
+//   name: "cart",
 //   initialState,
-//   reducers : {
-//     setCategory: (state,action) =>  {
-//       state.category =
-//     }
-//   }
-// })
-// вариант документации
+//   reducers: {
+//     setCartOpen(state, action) {
+//       state.CartOpen = action.payload;
+//     },
+//   },
+// });
 
-const openCartSlice = createSlice({
-  name: "cart",
-  initialState,
-  reducers: {
-    setCartOpen(state, action) {
-      state.CartOpen = action.payload;
-    },
-  },
-});
+// export const { setCartOpen } = openCartSlice.actions;
 
-// в стейт сохраняем, что придет в action.payload
+// export default openCartSlice.reducer;
 
-export const { setCartOpen } = openCartSlice.actions;
-
-export default openCartSlice.reducer;
+// drawer

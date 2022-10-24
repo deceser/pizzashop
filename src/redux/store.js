@@ -13,12 +13,12 @@ import storage from "redux-persist/lib/storage";
 
 import categorySlice from "./slices/categorySlice";
 import cartSlice from "./slices/cartSlice";
-import openCartSlice from "./slices/openCartSlice";
+// import openCartSlice from "./slices/openCartSlice"; // drawer
 
 const rootReduscer = combineReducers({
   categorySlice,
   cartSlice,
-  openCartSlice,
+  // openCartSlice, // drawer
 });
 
 const persistConfig = {
