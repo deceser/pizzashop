@@ -12,7 +12,7 @@ export default function CartButton({ openClickCart }) {
   const itemCount = items.reduce((sum, item) => sum + item.count, 0);
 
   return (
-    <ButtonGroup__Header onClick={openClickCart}>
+    <ButtonGroup__Header disabled={itemCount === 0} onClick={openClickCart}>
       <Typography variant="body2" sx={{ fontWeight: "bold" }}>
         {fullPrice}
       </Typography>

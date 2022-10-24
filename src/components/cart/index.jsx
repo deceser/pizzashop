@@ -1,6 +1,6 @@
 import React from "react";
 import Drawer from "@mui/material/Drawer";
-import Container from "@mui/material/Container";
+import { useNavigate } from "react-router-dom";
 
 import Title from "./Title";
 import CloseCart from "../button/CloseCart";
@@ -10,6 +10,10 @@ import Order from "../button/Order";
 import { Cart__Header } from "../../styles/cart";
 
 export default function Cart({ cartOpen, cartClose }) {
+  const navigate = useNavigate();
+  const clkickOrder = () => {
+    navigate("/cart");
+  };
   return (
     <Drawer onClose={cartClose} open={cartOpen} anchor="right">
       <Cart__Header>
@@ -18,7 +22,7 @@ export default function Cart({ cartOpen, cartClose }) {
       </Cart__Header>
       <CartItem />
       <Price />
-      <Order cartClose={cartClose} />
+      <Order clkickOrder={clkickOrder} />
     </Drawer>
   );
 }
