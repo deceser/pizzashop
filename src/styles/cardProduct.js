@@ -4,7 +4,7 @@ import { CardMedia } from "@mui/material";
 import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 
-export const Box__ProductCard = styled(Box)(({ theme }) => ({
+export const Box__ProductCard = styled(Box)(() => ({
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr)",
   gridTemplateRows: "repeat(1, 1fr)",
@@ -19,11 +19,12 @@ export const Box__ProductCard = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const Card__Product = styled(Card)(({ theme }) => ({
+export const Card__Product = styled(Card)(() => ({
   paddingTop: "20px",
   display: "grid",
   alignItems: "center",
   justifyItems: "center",
+  elevation: 10,
 }));
 
 export const Card__Media = styled(CardMedia)(() => ({

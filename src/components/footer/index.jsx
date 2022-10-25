@@ -16,7 +16,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 const Footer = () => {
   return (
     <AppBar
-      elevation={0}
+      elevation={2}
       position="static"
       sx={{
         borderRadius: "0 0 10px 10px",

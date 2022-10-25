@@ -21,7 +21,7 @@ export default function Header({ openClickCart }) {
       elevation={0}
       position="static"
       sx={{
-        padding: " 10px",
+        padding: "10px",
         borderRadius: "10px 10px 0 0",
       }}
     >

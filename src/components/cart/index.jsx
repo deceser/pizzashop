@@ -15,14 +15,19 @@ export default function Cart({ cartOpen, cartClose }) {
     navigate("/cart");
   };
   return (
-    <Drawer onClose={cartClose} open={cartOpen} anchor="right">
+    <Drawer
+      variant="temporary"
+      onClose={cartClose}
+      open={cartOpen}
+      anchor={"right"}
+    >
       <Cart__Header>
         <Title />
         <CloseCart cartClose={cartClose} />
       </Cart__Header>
       <CartItem />
       <Price />
-      <Order clkickOrder={clkickOrder} />
+      <Order clickOrder={clkickOrder} />
     </Drawer>
   );
 }

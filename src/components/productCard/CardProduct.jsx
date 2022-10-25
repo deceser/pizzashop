@@ -23,7 +23,6 @@ export default function CardProduct({ title, price, image, size, type, id }) {
 
   const [activeType, setActiveType] = React.useState("");
   const [activeSize, setActiveSize] = React.useState("");
-  const typeNames = ["tiny", "default"];
 
   const onClickAdd = () => {
     const item = {
@@ -32,7 +31,7 @@ export default function CardProduct({ title, price, image, size, type, id }) {
       price,
       image,
       size: [activeSize],
-      type: typeNames[activeType],
+      type: [activeType],
     };
     dispatch(addItem(item));
   };
@@ -59,7 +58,7 @@ export default function CardProduct({ title, price, image, size, type, id }) {
                     : "",
               }}
             >
-              {typeNames}
+              {types}
             </Button__SelectedType>
           ))}
         </Box>
