@@ -31,7 +31,16 @@ export const Button__Categories = styled(Button)(() => ({
   textTransform: "none",
   transition: "0.3s ease-in-out",
 
-  ":hover": {
+  "&:hover": {
+    backgroundColor: "#8DCC03",
+    textTransform: "none",
+    color: "white",
+    border: "1px solid #8DCC03",
+    transform: "scale(1.1)",
+    fontWeight: "bold",
+    textTransform: "none",
+  },
+  "&:focus": {
     backgroundColor: "#8DCC03",
     textTransform: "none",
     color: "white",

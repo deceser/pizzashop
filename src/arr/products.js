@@ -6,7 +6,7 @@ const products = [
     title: "Cheese",
     special: 1,
     price: 4,
-    type: ["tiny", "default"],
+    type: [1, 2],
     size: ["10 inch", "12 inch", "13 inch"],
   },
   {

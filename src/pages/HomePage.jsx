@@ -1,12 +1,9 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setCategory } from "../redux/slices/categorySlice";
 
 import products from "../arr/products";
 import SliderBlock from "../components/slider";
-import CardGreed from "../components/productCard";
-import Categories from "../components/button/Categories";
-import ViewAll from "../components/button/ViewAll";
+import ProductCard from "../components/productCard";
+import OurMenu from "../components/ourMenu";
 import About from "../components/about";
 import Icons from "../components/icons";
 import Opening from "../components/opening";
@@ -24,19 +21,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 function Home() {
-  const [showItem, setShowItem] = React.useState(4);
-
-  const clickShowItem = () => {
-    setShowItem(showItem + 4);
-  };
-
-  const dispatch = useDispatch();
-  const category = useSelector((state) => state.categorySlice.category);
-
-  const clickCategory = (id) => {
-    dispatch(setCategory(id));
-  };
-
   return (
     <>
       <SliderBlock />
@@ -45,7 +29,7 @@ function Home() {
           Bestseller
         </Typography>
       </Box>
-      <CardGreed products={products.filter((item) => item.special === 1)} />
+      <ProductCard products={products.filter((item) => item.special === 1)} />
       <section id="menu">
         <Box
           sx={{ display: "flex", justifyContent: "center", m: "40px 0 40px 0" }}
@@ -61,13 +45,7 @@ function Home() {
       <Box__SmartObject>
         <img src={berry} alt="berry" width="100px" height="100px" />
       </Box__SmartObject>
-      <Categories value={category} clickCategory={clickCategory} />
-      <CardGreed
-        products={products
-          .filter((item) => item.category === category)
-          .slice(0, showItem)}
-      />
-      <ViewAll clickShowItem={clickShowItem} />
+      <OurMenu />
       <Box sx={{ m: "0 0 -50px 50px", width: 50 }}>
         <img src={chees} alt="chees" />
       </Box>
