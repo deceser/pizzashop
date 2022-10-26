@@ -1,10 +1,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import {  Button__CallBack } from "../../styles/button";
+import { Button__CallBack } from "../../styles/button";
 const CallBack = () => {
   return (
     <Box>
-      <Button__CallBack variant="text"> Call Back</Button__CallBack>
+      <Button__CallBack> Call Back</Button__CallBack>
     </Box>
   );
 };

@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 const CloseCart = ({ cartClose }) => {
   return (
     <Box>
-      <IconButton color="error" aria-label="fingerprint" onClick={cartClose}>
+      <IconButton color="error" onClick={cartClose}>
         <CloseIcon />
       </IconButton>
     </Box>

@@ -1,14 +1,37 @@
 import React from "react";
-import Dialog from "@mui/material/Dialog";
 
+import { useForm } from "react-hook-form";
+
+import Dialog from "@mui/material/Dialog";
 import TextField from "@mui/material/TextField";
-import { Typography, Box, Paper } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 import { Button__CallBack } from "../../styles/button";
 
 const Registration = ({ registration, handleClose }) => {
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors, isValid },
+  } = useForm({
+    defaultValues: {
+      email: "",
+      password: "",
+      repeatPass: "",
+      firstName: "",
+      lastName: "",
+      city: "",
+      homeAdress: "",
+    },
+  });
+
+  const onSubmit = (values) => {
+    console.log(values);
+  };
+
   return (
-    <div>
+    <>
       <Dialog open={registration} onClose={handleClose}>
         <Box sx={{ height: "420px", width: "500px" }}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
@@ -16,90 +39,95 @@ const Registration = ({ registration, handleClose }) => {
               Create Account
             </Typography>
           </Box>
-          <Box>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <TextField
               sx={{ m: "10px 0 10px 10px", width: "480px" }}
-              id="outlined-textarea"
               label="Email"
-              placeholder="Email"
-              multiline
               color="info"
+              error={Boolean(errors.email?.message)}
+              placeholder={errors.email?.message}
+              {...register("email", { required: "Enter your email" })}
             />
-          </Box>
-          <Box
-            sx={{ display: "flex", justifyContent: "space-around" }}
-            noValidate
-          >
-            <TextField
-              sx={{ mb: "10px", width: "230px" }}
-              id="0"
-              autoComplete="current-password"
-              placeholder="Password"
-              type="password"
-              label="Password"
-              color="info"
-            />
+            <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+              <TextField
+                sx={{ mb: "10px", width: "230px" }}
+                id="0"
+                label="Password"
+                error={Boolean(errors.password?.message)}
+                placeholder={errors.password?.message}
+                color="info"
+                {...register("password", { required: "Enter your password" })} // inputRef
+              />
 
-            <TextField
-              sx={{ mb: "10px", width: "230px" }}
-              id="1"
-              type="password"
-              autoComplete="current-password"
-              label="Repeat Password"
-              placeholder="Repeat Password"
-              color="info"
-            />
-          </Box>
-          <Box
-            sx={{ display: "flex", justifyContent: "space-around" }}
-            noValidate
-          >
-            <TextField
-              sx={{ mb: "10px", width: "230px" }}
-              id="outlined-textarea"
-              label="First Name"
-              placeholder="John"
-              multiline
-              color="info"
-            />
+              <TextField
+                sx={{ mb: "10px", width: "230px" }}
+                id="1"
+                label="Repeat Password"
+                error={Boolean(errors.repeatPass?.message)}
+                placeholder={errors.repeatPass?.message}
+                color="info"
+                {...register("repeatPass", { required: "Enter your password" })} // inputRef
+              />
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+              <TextField
+                sx={{ mb: "10px", width: "230px" }}
+                label="First Name"
+                error={Boolean(errors.firstName?.message)}
+                placeholder={errors.firstName?.message}
+                color="info"
+                {...register("firstName", {
+                  required: "Enter your First Name",
+                })}
+              />
 
-            <TextField
-              sx={{ mb: "10px", width: "230px" }}
-              id="outlined-textarea"
-              label="Last Name"
-              placeholder="Smith"
-              multiline
-              color="info"
-            />
-          </Box>
-          <Box
-            sx={{ display: "flex", justifyContent: "space-around" }}
-            noValidate
-          >
-            <TextField
-              sx={{ mb: "10px", width: "230px" }}
-              id="outlined-textarea"
-              label="City"
-              placeholder="London"
-              multiline
-              color="info"
-            />
+              <TextField
+                sx={{ mb: "10px", width: "230px" }}
+                id="outlined-textarea"
+                label="Last Name"
+                error={Boolean(errors.lastName?.message)}
+                placeholder={errors.lastName?.message}
+                color="info"
+                {...register("lastName", {
+                  required: "Enter your Last Name",
+                })}
+              />
+            </Box>
+            <Box
+              sx={{ display: "flex", justifyContent: "space-around" }}
+              noValidate
+            >
+              <TextField
+                sx={{ mb: "10px", width: "230px" }}
+                id="outlined-textarea"
+                label="City"
+                error={Boolean(errors.city?.message)}
+                placeholder={errors.city?.message}
+                color="info"
+                {...register("city", {
+                  required: "Enter your City",
+                })}
+              />
 
-            <TextField
-              sx={{ mb: "10px", width: "230px" }}
-              label="Home Address"
-              placeholder="Baker Street 221b"
-              multiline
-              color="info"
-            />
-          </Box>
+              <TextField
+                sx={{ mb: "10px", width: "230px" }}
+                label="Home Address"
+                error={Boolean(errors.homeAdress?.message)}
+                placeholder={errors.homeAdress?.message}
+                color="info"
+                {...register("homeAdress", {
+                  required: "Enter your Home Adress",
+                })}
+              />
+            </Box>
 
-          <Box sx={{ display: "flex", justifyContent: "center", mt: "20px" }}>
-            <Button__CallBack>Registration</Button__CallBack>
-          </Box>
+            <Box sx={{ display: "flex", justifyContent: "center", mt: "20px" }}>
+              <Button__CallBack type="submit">Registration</Button__CallBack>
+            </Box>
+          </form>
         </Box>
       </Dialog>
-    </div>
+    </>
   );
 };
 export default Registration;
