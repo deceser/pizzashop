@@ -1,8 +1,8 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 
-import opening from "../../arr/opening";
-import { Box__TimeTable } from "../../styles/opening";
+import opening from "../../../arr/opening";
+import { Box__TimeTable } from "../../../styles/opening";
 
 const TimeTable = () => {
   return (

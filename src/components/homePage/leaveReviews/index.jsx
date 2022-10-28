@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import leave from "../../assets/icons/leave.png";
+import leave from "../../../assets/icons/leave.png";
 
 const leaveReviews = () => {
   return (

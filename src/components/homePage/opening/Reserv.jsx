@@ -6,8 +6,8 @@ import "react-phone-input-2/lib/material.css";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
-import { Button__CallBack } from "../../styles/button";
-import { Box__Modal } from "../../styles/reservModal";
+import { Button__CallBack } from "../../../styles/button";
+import { Box__Modal } from "../../../styles/reservModal";
 import { Box } from "@mui/material";
 import CallBackDone from "./CallBackDone";
 const Reserv = ({ handleClose, modalOpen }) => {

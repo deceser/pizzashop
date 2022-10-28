@@ -1,10 +1,10 @@
 import React from "react";
-import Auth from "../components/authPage";
+import AuthBlock from "../components/authPage";
 
 const SingUpPage = () => {
   return (
     <>
-      <Auth />
+      <AuthBlock />
     </>
   );
 };

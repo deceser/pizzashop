@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setCategory } from "../../redux/slices/categorySlice";
+import { setCategory } from "../../../redux/slices/categorySlice";
 
-import ProductCard from "../productCard";
-import products from "../../arr/products";
-import Categories from "../button/Categories";
-import ViewAll from "../button/ViewAll";
+import ProductCard from "../../productCard";
+import products from "../../../arr/products";
+import Categories from "../../button/Categories";
+import ViewAll from "../../button/ViewAll";
 
 const OurMenu = () => {
   const [showItem, setShowItem] = React.useState(4);

@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 
-import { Box__TitleOpen } from "../../styles/opening";
+import { Box__TitleOpen } from "../../../styles/opening";
 
 export const TitleOpen = () => {
   return (

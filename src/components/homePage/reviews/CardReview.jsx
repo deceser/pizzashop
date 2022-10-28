@@ -9,8 +9,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import reviews from "../../arr/reviews";
-import { Box__Card } from "../../styles/reviews";
+import reviews from "../../../arr/reviews";
+import { Box__Card } from "../../../styles/reviews";
 
 const settings = {
   dots: true,

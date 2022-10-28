@@ -2,7 +2,7 @@ import React from "react";
 
 import Typography from "@mui/material/Typography";
 
-import { Box__Review, Box__Title } from "../../styles/reviews";
+import { Box__Review, Box__Title } from "../../../styles/reviews";
 import CardReview from "./CardReview";
 
 const Reviews = () => {

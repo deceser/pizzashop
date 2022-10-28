@@ -3,7 +3,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 
-import { Box__Modal } from "../../styles/reservModal";
+import { Box__Modal } from "../../../styles/reservModal";
 import { Box } from "@mui/material";
 
 const CallBackDone = ({ handleDoneClose, modalDoneOpen }) => {

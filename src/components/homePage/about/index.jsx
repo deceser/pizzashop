@@ -1,9 +1,8 @@
 import React from "react";
 
-import about from "../../assets/image/about.png";
-import { Box__Container } from "../../styles/about";
+import about from "../../../assets/image/about.png";
+import { Box__Container } from "../../../styles/about";
 
-import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 

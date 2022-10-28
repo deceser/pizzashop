@@ -5,9 +5,9 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import CardContent from "@mui/material/CardContent";
 
-import { Button__Oppening } from "../../styles/button";
-import { Box__Container, Card__Opening } from "../../styles/opening";
-import background3 from "../../assets/image/background3.png";
+import { Button__Oppening } from "../../../styles/button";
+import { Box__Container, Card__Opening } from "../../../styles/opening";
+import background3 from "../../../assets/image/background3.png";
 import Header from "./Header";
 import Title from "./TitleOpen";
 import TimeTable from "./TimeTable";

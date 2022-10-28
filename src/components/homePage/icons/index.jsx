@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Box__Icon } from "../../styles/icons";
-import icons from "../../arr/icons";
+import { Box__Icon } from "../../../styles/icons";
+import icons from "../../../arr/icons";
 
 const Icons = () => {
   return (
