@@ -1,11 +1,11 @@
 Stack:
 
-ReactJS + hook
-React Router
-Redux
-Redux thunk
-Redux persist
-Material-UI (styled-components)
+ReactJS + hook,
+React Router,
+Redux,
+Redux thunk,
+Redux persist,
+Material-UI (styled-components),
 
 Deploy:
 
