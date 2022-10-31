@@ -17,10 +17,16 @@ import berry from "../../assets/before/berry.png";
 import layer1 from "../../assets/before/layer1.png";
 import layer2 from "../../assets/before/layer2.png";
 
+import axios from "../../axios";
+
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 function Home() {
+  React.useEffect(() => {
+    axios.get("/review");
+  }, []);
+
   return (
     <>
       <SliderBlock />
