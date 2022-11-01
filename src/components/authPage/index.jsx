@@ -1,17 +1,22 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useSelector, useDispatch } from "react-redux";
+import { isAuthSelect, userAuth } from "../../redux/slices/authSlice";
 
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 
-import { useForm } from "react-hook-form";
-
 import Registration from "../registrationForm";
 import Logo from "./Logo";
 import Register from "../button/Register";
 import SingIn from "../button/SingIn";
+import LogOut from "../button/LogOut";
 
 const Auth = () => {
+  const isAuth = useSelector(isAuthSelect);
+  const dispatch = useDispatch();
   const [registration, setRegistration] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -32,11 +37,25 @@ const Auth = () => {
       email: "",
       password: "",
     },
+    mode: "all",
   });
 
-  const onSubmit = (values) => {
-    console.log(values);
+  const onSubmit = async (values) => {
+    const data = await dispatch(userAuth(values));
+    if (!data.payload) {
+      return alert("wrong login or password!");
+    }
+    // if (data.payload) {
+    //   dispatch(userAuth(values));
+    // }
+    if ("token" in data.payload) {
+      window.localStorage.setItem("token", data.payload.token);
+    }
   };
+
+  if (isAuth) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <>
@@ -57,7 +76,7 @@ const Auth = () => {
                 mb: "10px",
                 width: "300px",
               }}
-              // type="email"
+              type="email"
               label="Email"
               error={Boolean(errors.email?.message)}
               placeholder={errors.email?.message}

@@ -3,7 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 
 import { Button__LogIn } from "../../styles/button";
-const LogIn = () => {
+const LogIn = ({}) => {
   return (
     <Box sx={{ ml: "12px" }}>
       <Button__LogIn type="submit" variant="contained">

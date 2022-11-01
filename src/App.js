@@ -1,7 +1,7 @@
 import React from "react";
 
-// import { useSelector, useDispatch } from "react-redux";
-// import { setCartOpen } from "./redux/slices/openCartSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { isAuthSelect, userAuthMe } from "./redux/slices/authSlice";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -17,15 +17,10 @@ import Footer from "./components/footer";
 
 function App() {
   // const dispatch = useDispatch();
-  // const CartOpen = useSelector((state) => state.openCartSlice.CartOpen);
-
-  // const clickCart = () => {
-  //   dispatch(setCartOpen(true));
-  // };
-
-  // const CloseClickCart = () => {
-  //   dispatch(setCartOpen(false));
-  // };
+  // const isAuth = useSelector(isAuthSelect);
+  // React.useEffect(() => {
+  //   dispatch(userAuthMe());
+  // }, []);
 
   const [openCart, setOpenCart] = React.useState(false);
 
