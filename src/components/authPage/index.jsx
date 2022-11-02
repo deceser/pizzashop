@@ -12,7 +12,6 @@ import Registration from "../registrationForm";
 import Logo from "./Logo";
 import Register from "../button/Register";
 import SingIn from "../button/SingIn";
-import LogOut from "../button/LogOut";
 
 const Auth = () => {
   const isAuth = useSelector(isAuthSelect);
@@ -45,12 +44,12 @@ const Auth = () => {
     if (!data.payload) {
       return alert("wrong login or password!");
     }
-    // if (data.payload) {
-    //   dispatch(userAuth(values));
-    // }
-    if ("token" in data.payload) {
-      window.localStorage.setItem("token", data.payload.token);
+    if (data.payload) {
+      dispatch(userAuth(values));
     }
+    // if ("token" in data.payload) {
+    //   window.localStorage.setItem("token", data.payload.token);
+    // }
   };
 
   if (isAuth) {

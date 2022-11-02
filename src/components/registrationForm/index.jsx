@@ -37,7 +37,7 @@ const Registration = ({ registration, handleClose }) => {
   };
 
   if (isAuth) {
-    return <Navigate to="/" />;
+    return <Navigate to="/authorization" />;
   }
 
   return (
