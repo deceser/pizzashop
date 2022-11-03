@@ -1,16 +1,32 @@
 import React from "react";
+import { useNavigate, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { isAuthSelect } from "../../../redux/slices/authSlice";
+
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import leave from "../../../assets/icons/leave.png";
+import { IconButton } from "@mui/material";
+import RateReviewIcon from "@mui/icons-material/RateReview";
 
-const leaveReviews = () => {
+const LeaveReviews = () => {
+  const isAuth = useSelector(isAuthSelect);
+  const navigate = useNavigate();
+  const clickNewReview = () => {
+    navigate("/review");
+  };
+
   return (
     <Paper
       sx={{ backgroundColor: "#8DCC03", height: "50px", borderRadius: "0px" }}
     >
-      <Box sx={{ display: "flex", justifyContent: "center", pt: "15px" }}>
-        <img src={leave} alt="leave" width="30px" />
+      <Box
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <IconButton onClick={clickNewReview} size="large">
+          <RateReviewIcon />
+        </IconButton>
+
         <Typography sx={{ ml: "10px" }}>
           Leave your feedback about the PIZZA place or a recent delivery
         </Typography>
@@ -18,4 +34,4 @@ const leaveReviews = () => {
     </Paper>
   );
 };
-export default leaveReviews;
+export default LeaveReviews;
