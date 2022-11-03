@@ -14,6 +14,7 @@ import AuthPage from "./pages/AuthPage";
 import Menu from "./pages/MenuPage";
 import CartPage from "./pages/CartPage";
 import Footer from "./components/footer";
+import Review from "./components/reviewPage";
 
 function App() {
   // const dispatch = useDispatch();
@@ -42,6 +43,7 @@ function App() {
           {/* <Route path="/menu" element={<Menu />} /> */}
           <Route path="/cart" element={<CartPage />} />
           <Route path="/authorization" element={<AuthPage />} />
+          <Route path="/review" element={<Review />} />
         </Routes>
         <Footer />
       </Container__Wraper>
