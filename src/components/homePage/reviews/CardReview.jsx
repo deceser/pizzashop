@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchReview } from "../../../redux/slices/reviewSlice";
 
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -22,6 +24,13 @@ const settings = {
 };
 
 const CardReview = () => {
+  const dispatch = useDispatch();
+  const { review } = useSelector((state) => state.reviewReducer);
+
+  React.useEffect(() => {
+    dispatch(fetchReview());
+  }, []);
+
   return (
     <Box
       sx={{
@@ -29,7 +38,7 @@ const CardReview = () => {
       }}
     >
       <Slider {...settings}>
-        {reviews.map((item, id) => (
+        {review.items.map((item, id) => (
           <Box sx={{ display: "flex", paddingTop: "20px" }} key={id}>
             <Box__Card elevation={0}>
               <Box sx={{ mt: "-20px" }}>
@@ -44,15 +53,17 @@ const CardReview = () => {
                   m: "10px 0 10px 0",
                 }}
               >
-                <Typography>{item.comment}</Typography>
+                <Typography>{item.text}</Typography>
               </Box>
               <Box>
-                <Typography sx={{ fontWeight: "bold" }}>{item.name}</Typography>
+                <Typography sx={{ fontWeight: "bold" }}>
+                  {item.user.fullName}
+                </Typography>
               </Box>
               <Box>
                 <Rating
                   name="half-rating-read"
-                  defaultValue={item.raiting}
+                  defaultValue={item.rating}
                   precision={0.5}
                   readOnly
                 />

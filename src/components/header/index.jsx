@@ -17,6 +17,7 @@ import OpenCart from ".././button/OpenCart";
 export default function Header({ openClickCart }) {
   const isAuth = useSelector(isAuthSelect);
   const dispatch = useDispatch();
+
   const clickLogOut = () => {
     if (window.confirm("Are you sure?")) dispatch(logout());
   };

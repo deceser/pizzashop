@@ -49,7 +49,10 @@ const Auth = () => {
     }
     // if ("token" in data.payload) {
     //   window.localStorage.setItem("token", data.payload.token);
+    // } else {
+    //   alert("err auth");
     // }
+    // save token
   };
 
   if (isAuth) {

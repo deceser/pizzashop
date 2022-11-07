@@ -1,8 +1,4 @@
 import React from "react";
-
-import { useSelector, useDispatch } from "react-redux";
-import { isAuthSelect, userAuthMe } from "./redux/slices/authSlice";
-
 import { Routes, Route } from "react-router-dom";
 
 import { Container__Wraper } from "./styles/wraper";
@@ -17,12 +13,6 @@ import Footer from "./components/footer";
 import Review from "./components/reviewPage";
 
 function App() {
-  // const dispatch = useDispatch();
-  // const isAuth = useSelector(isAuthSelect);
-  // React.useEffect(() => {
-  //   dispatch(userAuthMe());
-  // }, []);
-
   const [openCart, setOpenCart] = React.useState(false);
 
   const clickCartOpen = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { isAuthSelect } from "../../../redux/slices/authSlice";
 
@@ -23,7 +23,7 @@ const LeaveReviews = () => {
       <Box
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
-        <IconButton onClick={clickNewReview} size="large">
+        <IconButton onClick={clickNewReview} disabled={!isAuth} size="large">
           <RateReviewIcon />
         </IconButton>
 

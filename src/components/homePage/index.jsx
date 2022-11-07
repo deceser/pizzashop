@@ -23,10 +23,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 function Home() {
-  // React.useEffect(() => {
-  //   axios.get("/review");
-  // }, []);
-
   return (
     <>
       <SliderBlock />
