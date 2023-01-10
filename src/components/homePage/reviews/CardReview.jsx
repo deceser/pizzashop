@@ -42,11 +42,7 @@ const CardReview = () => {
           <Box sx={{ display: "flex", paddingTop: "20px" }} key={id}>
             <Box__Card elevation={0}>
               <Box sx={{ mt: "-20px" }}>
-                <Avatar
-                  alt="Avatar"
-                  src={item.avatar}
-                  sx={{ width: 60, height: 60 }}
-                />
+                <Avatar alt="Avatar" src={item.avatar} sx={{ width: 60, height: 60 }} />
               </Box>
               <Box
                 sx={{
@@ -59,12 +55,7 @@ const CardReview = () => {
                 <Typography sx={{ fontWeight: "bold" }}>{item.name}</Typography>
               </Box>
               <Box>
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={item.raiting}
-                  precision={0.5}
-                  readOnly
-                />
+                <Rating name="half-rating-read" defaultValue={item.raiting} precision={0.5} readOnly />
               </Box>
             </Box__Card>
           </Box>

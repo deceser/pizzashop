@@ -45,9 +45,7 @@ const Registration = ({ registration, handleClose }) => {
       <Dialog open={registration} onClose={handleClose}>
         <Box sx={{ height: "340px", width: "500px" }}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Typography sx={{ fontWeight: "bold", fontSize: "30px" }}>
-              Create Account
-            </Typography>
+            <Typography sx={{ fontWeight: "bold", fontSize: "30px" }}>Create Account</Typography>
           </Box>
           <form onSubmit={handleSubmit(onSubmit)}>
             <TextField
@@ -69,16 +67,6 @@ const Registration = ({ registration, handleClose }) => {
                 color="info"
                 {...register("password", { required: "Enter your password" })} // inputRef
               />
-
-              {/* <TextField
-                sx={{ mb: "10px", width: "230px" }}
-                id="1"
-                label="Repeat Password"
-                error={Boolean(errors.repeatPass?.message)}
-                placeholder={errors.repeatPass?.message}
-                color="info"
-                {...register("repeatPass", { required: "Enter your password" })} // inputRef
-              /> */}
             </Box>
             <Box sx={{ display: "flex", justifyContent: "space-around" }}>
               <TextField
@@ -91,47 +79,7 @@ const Registration = ({ registration, handleClose }) => {
                   required: "Enter your First Name",
                 })}
               />
-
-              {/* <TextField
-                sx={{ mb: "10px", width: "230px" }}
-                id="outlined-textarea"
-                label="Last Name"
-                error={Boolean(errors.lastName?.message)}
-                placeholder={errors.lastName?.message}
-                color="info"
-                {...register("lastName", {
-                  required: "Enter your Last Name",
-                })}
-              />
             </Box>
-            <Box
-              sx={{ display: "flex", justifyContent: "space-around" }}
-              noValidate
-            >
-              <TextField
-                sx={{ mb: "10px", width: "230px" }}
-                id="outlined-textarea"
-                label="City"
-                error={Boolean(errors.city?.message)}
-                placeholder={errors.city?.message}
-                color="info"
-                {...register("city", {
-                  required: "Enter your City",
-                })}
-              />
-
-              <TextField
-                sx={{ mb: "10px", width: "230px" }}
-                label="Home Address"
-                error={Boolean(errors.homeAdress?.message)}
-                placeholder={errors.homeAdress?.message}
-                color="info"
-                {...register("homeAdress", {
-                  required: "Enter your Home Adress",
-                })}
-              /> */}
-            </Box>
-
             <Box sx={{ display: "flex", justifyContent: "center", mt: "20px" }}>
               <Button__CallBack type="submit">Registration</Button__CallBack>
             </Box>

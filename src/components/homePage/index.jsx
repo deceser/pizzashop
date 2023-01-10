@@ -12,12 +12,10 @@ import LeaveReviews from "../../components/homePage/leaveReviews";
 
 import { Box__SmartObject, Box__Layer, Box__Layer2 } from "../../styles/layer";
 
-import chees from "../../assets/before/chees.png";
-import berry from "../../assets/before/berry.png";
-import layer1 from "../../assets/before/layer1.png";
-import layer2 from "../../assets/before/layer2.png";
-
-import axios from "../../axios";
+import chees from "../../assets/image/chees.png";
+import berry from "../../assets/image/berry.png";
+import layer1 from "../../assets/image/layer1.png";
+import layer2 from "../../assets/image/layer2.png";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -33,9 +31,7 @@ function Home() {
       </Box>
       <ProductCard products={products.filter((item) => item.special === 1)} />
       <section id="menu">
-        <Box
-          sx={{ display: "flex", justifyContent: "center", m: "40px 0 40px 0" }}
-        >
+        <Box sx={{ display: "flex", justifyContent: "center", m: "40px 0 40px 0" }}>
           <Typography variant="h6" sx={{ fontWeight: "bold" }}>
             Discover Our menu
           </Typography>

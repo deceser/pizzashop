@@ -47,12 +47,6 @@ const Auth = () => {
     if (data.payload) {
       dispatch(userAuth(values));
     }
-    // if ("token" in data.payload) {
-    //   window.localStorage.setItem("token", data.payload.token);
-    // } else {
-    //   alert("err auth");
-    // }
-    // save token
   };
 
   if (isAuth) {
@@ -72,7 +66,6 @@ const Auth = () => {
             }}
           >
             <Logo />
-
             <TextField
               sx={{
                 mb: "10px",
@@ -87,12 +80,11 @@ const Auth = () => {
             />
             <TextField
               sx={{ mb: "10px", width: "300px" }}
-              // type="password"
               label="Password"
               error={Boolean(errors.password?.message)}
               placeholder={errors.password?.message}
               color="info"
-              {...register("password", { required: "Enter your password" })} // inputRef
+              {...register("password", { required: "Enter your password" })}
             />
             <Box sx={{ display: "flex", mt: "10px" }}>
               <Register handleClickOpen={handleClickOpen} />

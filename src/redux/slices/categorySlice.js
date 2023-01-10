@@ -4,17 +4,6 @@ const initialState = {
   category: [],
 };
 
-//  const categorySlice = createSlice ({
-//   name: "categories",
-//   initialState,
-//   reducers : {
-//     setCategory: (state,action) =>  {
-//       state.category =
-//     }
-//   }
-// })
-// вариант документации
-
 const categorySlice = createSlice({
   name: "categories",
   initialState,
@@ -24,8 +13,6 @@ const categorySlice = createSlice({
     },
   },
 });
-
-// в стейт сохраняем, что придет в action.payload
 
 export const { setCategory } = categorySlice.actions;
 
